@@ -1,8 +1,30 @@
 import Link from 'next/link';
 import Layout from "../layouts/Main";
+import { useEffect } from 'react';
 
 const ThankYouPage = () => {
   const orderNumber = '#2024-0123';
+  const customerEmail = 'customer@example.com';
+  const orderTotal = 100; // Replace with actual order total
+
+  useEffect(() => {
+    // Check if P39 is available in the window object
+    if (typeof window !== 'undefined' && (window as any).P39) {
+      (window as any).P39.showPlacement({
+        email: customerEmail,
+        orderId: orderNumber,
+        amount: orderTotal,
+        // any other attributes you want to pass
+      });
+    }
+
+    // Cleanup function to remove placement when component unmounts
+    return () => {
+      if (typeof window !== 'undefined' && (window as any).P39) {
+        (window as any).P39.removePlacement();
+      }
+    };
+  }, []); // Empty dependency array means this runs once on mount
 
   return (
     <Layout>
