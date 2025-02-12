@@ -181,12 +181,14 @@ const CheckoutPage = () => {
               <i className="icon-left" /> Back
             </Link>
             <div className="cart-actions__items-wrapper">
-              <button type="button" className="btn btn--rounded btn--border">
-                Continue shopping
-              </button>
-              <button type="button" className="btn btn--rounded btn--yellow">
-                Proceed to payment
-              </button>
+              <Link
+                href="/thank-you"
+                className="btn btn--rounded btn--yellow"
+              >
+                <button type="button" className="btn btn--rounded btn--yellow">
+                  place order
+                </button>
+              </Link>
             </div>
           </div>
         </div>
