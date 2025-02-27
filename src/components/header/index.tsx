@@ -57,7 +57,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
   useOnClickOutside(searchRef, closeSearch);
 
   return (
-    <header className={`site-header ${!onTop ? "site-header--fixed" : ""}`}>
+    <header className={`site-header ${!onTop ? "site-header--fixed" : ""}`} style={{ zIndex: 0 }}>
       <div className="container">
         <Link href="/">
           <h1 className="site-logo">
