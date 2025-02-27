@@ -54,7 +54,7 @@ export default class CustomDocument extends Document<DocumentProps> {
           <script
             dangerouslySetInnerHTML={{
               __html: `
-                (()=>{"use strict";!function(e,n){e._p39SDK={commandQueue:[],realSDKInstance:null,config:{storeId:"0e806375-5944-413a-8490-59387d46b671",isTestMode:!1, environment:"development"}},e.P39={showPlacement:function(n){if(void 0===n&&(n={}),e._p39SDK.realSDKInstance)return e._p39SDK.realSDKInstance.showPlacement(n);e._p39SDK.commandQueue.push({method:"showPlacement",args:[n]})},removePlacement:function(){if(e._p39SDK.realSDKInstance)return e._p39SDK.realSDKInstance.removePlacement();e._p39SDK.commandQueue.push({method:"removePlacement",args:[]})}};var a=n.createElement("script");a.async=!0,a.src="https://storage.googleapis.com/global-assets-personapay/assets/files/js/test-p39sdk.min.js",n.head.appendChild(a)}(window,document)})();
+                (()=>{"use strict";!function(e,n){e._p39SDK={commandQueue:[],realSDKInstance:null,config:{storeId:"cdc94fec-19fd-49d9-bc08-a1b7b615f7dd",isTestMode:!1, environment:"development"}},e.P39={showPlacement:function(n){if(void 0===n&&(n={}),e._p39SDK.realSDKInstance)return e._p39SDK.realSDKInstance.showPlacement(n);e._p39SDK.commandQueue.push({method:"showPlacement",args:[n]})},removePlacement:function(){if(e._p39SDK.realSDKInstance)return e._p39SDK.realSDKInstance.removePlacement();e._p39SDK.commandQueue.push({method:"removePlacement",args:[]})}};var a=n.createElement("script");a.async=!0,a.src="https://storage.googleapis.com/global-assets-personapay/assets/files/js/p39sdk-dev.min.js",n.head.appendChild(a)}(window,document)})();
               `,
             }}
           />
