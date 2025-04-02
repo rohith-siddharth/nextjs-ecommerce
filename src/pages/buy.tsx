@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 const ThankYouPage = () => {
   const orderNumber = '#2024-0123';
   const customerEmail = 'customer@example.com';
-  const orderTotal = 100; // Replace with actual order total
 
   useEffect(() => {
     // Check if P39 is available the window object
