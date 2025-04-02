@@ -1,20 +1,7 @@
 import Link from 'next/link';
 import Layout from "../layouts/Main";
 import { useEffect } from 'react';
-// Remove the import statement
-import { initializeSDK } from '@pier39/web-sdk';
 
-// Use require instead
-// ts-ignore
-// const { initializeSDK } = require('pier39-web-sdk');
-
-console.log('initializeSDK', initializeSDK);
-
-const sdk = initializeSDK({
-  storeId: 'cdc94fec-19fd-49d9-bc08-a1b7b615f7dd',
-  isTestMode: false,
-  environment: 'development',
-});
 
 const ThankYouPage = () => {
   const orderNumber = '#2024-0123';
@@ -22,9 +9,9 @@ const ThankYouPage = () => {
   const orderTotal = 100; // Replace with actual order total
 
   useEffect(() => {
-    // Check if P39 is available in the window object
+    // Check if P39 is available the window object
     if (typeof window !== 'undefined' && (window as any).P39) {
-      sdk?.showPlacement({
+      (window as any).P39.showPlacement({
         email: customerEmail,
         // any other attributes you want to pass
       });
@@ -43,7 +30,7 @@ const ThankYouPage = () => {
       <section className="cart">
         <div className="container">
           <div className="cart__intro">
-            <h3 className="cart__title">Thank you for your order!</h3>
+            <h3 className="cart__title">Thank you</h3>
           </div>
 
           <div className="block">
