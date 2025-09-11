@@ -24,7 +24,7 @@ const ThankYouPage = () => {
     // Check if P39 is available in the window object
     if (typeof window !== 'undefined' && (window as any).P39) {
       console.log('P39', (window as any).P39);
-      (window as any).P39.showPlacement('7076cff3-0ec0-4211-819f-2eaba8d92268',{
+      (window as any).P39.showPlacement('d812af97-3bf7-43d4-bf5f-e212369dfddc',{
         email: customerEmail,
         // any other attributes you want to pass
       });
@@ -51,6 +51,8 @@ const ThankYouPage = () => {
               <h2 style={{ fontSize: '20px', marginBottom: '2rem' }}>Order Confirmed</h2>
               <p style={{ fontSize: '20px', marginBottom: '2rem' }}>Order number: {orderNumber}</p>
               <p style={{ fontSize: '16px', marginBottom: '2rem' }}>We'll send you a confirmation email with your order details.</p>
+
+              <div id="persona" style={{ width: '600px', height: '400px' }}></div>
               
               <div style={{ marginTop: '3rem' }}>
                 <Link href="/" className="btn btn--rounded btn--yellow">
